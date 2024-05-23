@@ -7,11 +7,6 @@ body {
 	font-style: normal;
 }
 
-img {
-	width: 100%;
-	height: 100%;
-}
-
 /* Header */
 .top-header {
 	background-color: white;
@@ -25,12 +20,12 @@ img {
 	align-items: center;
 }
 .top-header .name {
-	font-size: 26px;
+	font-size: 40px;
 }
 .nav ul {
 	display: flex;
 	list-style-type: none;
-	font-size: 14px;
+	font-size: 25px;
 	margin-bottom: 0;
 }
 .nav li {
@@ -38,10 +33,10 @@ img {
 }
 .nav a {
 	text-decoration: none;
-	color: #000
+	color: #000;
 }
 .social-link img {
-	width: 20px;
+	width: 40px;
 }
 
 /* Caroussel */
@@ -77,37 +72,43 @@ img {
 
 }
 #about-me {
-	flex: 2
+	flex: 2;
 }
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
-	font-size: 30px;
+	font-size: 35px;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	font-size: 16px;
-	width: 60%;
+	font-size: 25px;
+	width: 80%;
+	padding-bottom: 20px;
+	text-align: justify;
 }
 #about-me p {
 	width: 80%;
-	font-size: 14px;
+	font-size: 20px;
+	text-align: justify;
 }
 
 /* Port-Folio */
-.title{
+.title {
 	text-align: center;
 	padding-block: 2em;
+	font-size: 35px;
 }
 .gallery .nav {
 	justify-content: center;
+	font-size: 20px;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
+	color: black;
 	background-color: #BEB45A;
-	border-radius:0 ;
+	border-radius: 0 ;
+	font-weight: 900;
 }
 .nav-pills .nav-link {
 	color: #000
@@ -153,12 +154,12 @@ img {
 	font-style: italic;
 	font-weight: 300;
 	font-size: 34px;
-
+	text-align: justify;
 }
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
-	font-size: 22px;
+	font-size: 25px;
 }
 
 /* Services */
@@ -181,7 +182,6 @@ img {
 	justify-content: space-between;
 	display: flex;
 	padding : 2em 0;
-
 }
 .service {
 	background-color: white;
@@ -193,6 +193,9 @@ img {
 	flex-direction: column;
 	justify-content: space-between;
 	z-index: 1;
+}
+.service p {
+	font-size: 20px;
 }
 
 /* Contact */
@@ -218,21 +221,31 @@ img {
 }
 .form-container {
 	flex : 2;
-
+}
+.form-container h2 {
+	padding: 0;
+}
+.form-container p {
+	font-size: 22px;
+	text-align: center;
 }
 form {
 	display: flex;
 	flex-direction: column;
 	width: 70%;
 	align-items: flex-start;
+	margin: auto;
 }
-
+form label {
+	font-size: 20px;
+}
 form input {
 	width: 100%;
 	background-color: transparent;
 	border: solid 1px;
 	height: 2.5em;
 	margin-bottom: 20px;
+	font-size: 20px;
 }
 form textarea {
 	width: 100%;
@@ -245,11 +258,20 @@ form textarea {
 }
 input[type="submit"] {
 	background-color: #BEB45A;
-	padding: .5em 1em
+	padding: .5em 1em;
 }
 
 /* Format responsive */
-@media all and (max-width: 1180px) {
+@media (max-width: 1023.98px) {
+	.top-header .name {
+		font-size: 25px;
+	}
+	.nav ul {
+		font-size: 20px;
+	}
+	.social-link img {
+		width: 25px;
+	}
 	.picture {
 		flex : 2;
 	}
@@ -259,13 +281,18 @@ input[type="submit"] {
 	.about-me__title {
 		margin-top: 0;
 		margin-bottom: 1em;
+		font-size: 25px;
+		text-align: center;
+		margin-top: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h3 {
 		width: 100%;
+		font-size: 20px;
 	}
-}
-
-@media all and (max-width: 1000px) {
+	#about-me p {
+		width: 100%;
+		font-size: 18px;
+	}
 	#about{
 		flex-direction: column;
 
@@ -282,9 +309,17 @@ input[type="submit"] {
 		left: 0;
 		z-index: -1;
 	}
-	.about-me__title{
-		text-align: center;
-		margin-top: 1em;
+	.title {
+		font-size: 25px;
+	}
+	.gallery .nav {
+		font-size: 18px;
+	}
+	.quote__text {
+		font-size: 24px;
+	}
+	.quote__author {
+		font-size: 20px;
 	}
 	#services .container {
 		flex-direction: column;
@@ -306,6 +341,12 @@ input[type="submit"] {
 		left: auto;
 		z-index: 0;
 	}
+	.service h3 {
+		font-size: 23px;
+	}
+	.service p {
+		font-size: 17px;
+	}
 	#contact .container {
 		flex-direction: column;
 	}
@@ -322,22 +363,53 @@ input[type="submit"] {
 	}
 }
 
-@media all and (max-width: 650px) {
+@media (max-width: 767.98px) {
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
 	}
 	.top-header .nav, .top-header .nav ul {
 		width: 100%;
-		padding: 0 0 0 0;
+		padding-top: 10px;
+		padding-left: 10px;
+		font-size: 15px;
 	}
 	.top-header .nav li {
 		flex: 1;
-		padding-block: 1em;
 		text-align: center;
+		padding: 0;
+	}
+	.social-link img {
+		width: 20px;
 	}
 	.picture.left::before, .picture.right::before {
 		height: 150px;
+	}
+	.about-me__title {
+		font-size: 20px;
+	}
+	.about-me__introduction {
+		font-size: 18px;
+	}
+	#about-me p {
+		font-size: 16px;
+	}
+	.title {
+		font-size: 20px;
+		padding-bottom: 0px;
+	}
+	.gallery .nav {
+		font-size: 16px;
+	}
+	.quote__text {
+		font-size: 20px;
+	}
+	.service h3 {
+		font-size: 18px;
+		font-weight: 700;
+	}
+	.service p {
+		font-size: 16px;
 	}
 	#services .container {
 		align-items: center;
@@ -349,8 +421,18 @@ input[type="submit"] {
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
+	.form-container p {
+		font-size: 16px;
+		text-align: justify;
+	}
 	form {
 		width: 100%;
+	}
+	form label {
+		font-size: 16px;
+	}
+	input[type="submit"] {
+		font-size: 16px;
 	}
 	.picture {
 		width: 80%;
