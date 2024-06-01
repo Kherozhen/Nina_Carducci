@@ -1,30 +1,23 @@
-let contactForm = document.querySelector('#contactForm');
-let emailInput = document.querySelector('#email');
-const emailError = document.querySelector('.emailError .error');
+const contactForm = document.querySelector('#contactForm');
+const emailInput = document.querySelector('#email');
 const sendEmail = document.querySelector('.sendEmail');
+const errorEmail = document.querySelector('.errorEmail');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault(); // Empêche le rechargement de la page
 
-    const email = emailInput.value;
+    sendEmail.style.display = 'block';
 
-    // Vérifier l'adresse email
-    if (!validateEmail(email)) {
-        emailInput.classList.add('errorEmail');
+    /*// Vérifier l'adresse email
+    if (!(emailInput)) {
+        errorEmail.style.display = 'block';
         sendEmail.style.display = 'none';
         return; // Empêche l'envoi du formulaire
     } else {
-        emailInput.classList.remove('errorEmail');
+        errorEmail.style.display = 'none';
         sendEmail.style.display = 'block';
-    } 
-    console.log(emailInput)
+    }*/
 
     // Reset du formulaire à l'envoi
     contactForm.reset();
 });
-
-
-function validateEmail(email) {
-    const verification = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return verification.test(String(email).toLowerCase());
-}

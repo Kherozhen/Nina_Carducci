@@ -20,12 +20,12 @@ body {
 	align-items: center;
 }
 .top-header .name {
-	font-size: 40px;
+	font-size: 20px;
 }
 .nav ul {
 	display: flex;
 	list-style-type: none;
-	font-size: 25px;
+	font-size: 16px;
 	margin-bottom: 0;
 }
 .nav li {
@@ -36,7 +36,7 @@ body {
 	color: #000;
 }
 .social-link img {
-	width: 40px;
+	width: 20px;
 }
 
 /* Caroussel */
@@ -77,30 +77,28 @@ body {
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 40px;
-	font-size: 35px;
+	font-size: 22px;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
 	padding-bottom: 20px;
-	text-align: justify;
 }
 #about-me p {
 	width: 80%;
-	font-size: 20px;
-	text-align: justify;
+	font-size: 16px;
 }
 
 /* Port-Folio */
 .title {
 	text-align: center;
 	padding-block: 2em;
-	font-size: 35px;
+	font-size: 22px;
 }
 .gallery .nav {
 	justify-content: center;
-	font-size: 20px;
+	font-size: 16px;
 }
 .gallery li {
 	cursor: pointer;
@@ -154,13 +152,12 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-	font-size: 34px;
-	text-align: justify;
+	font-size: 25px;
 }
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
-	font-size: 25px;
+	font-size: 20px;
 }
 
 /* Services */
@@ -195,8 +192,12 @@ body {
 	justify-content: space-between;
 	z-index: 1;
 }
-.service p {
+.service h3 {
 	font-size: 20px;
+	font-weight: 700;
+}
+.service p {
+	font-size: 16px;
 }
 
 /* Contact */
@@ -230,7 +231,7 @@ body {
 	padding: 0;
 }
 .form-container p {
-	font-size: 22px;
+	font-size: 16px;
 	text-align: center;
 }
 form {
@@ -241,7 +242,7 @@ form {
 	margin: auto;
 }
 form label {
-	font-size: 20px;
+	font-size: 16px;
 }
 form input {
 	width: 100%;
@@ -249,10 +250,7 @@ form input {
 	border: solid 1px;
 	height: 2.5em;
 	margin-bottom: 20px;
-	font-size: 20px;
-}
-.errorEmail {
-	border: 3px solid red;
+	font-size: 16px;
 }
 form textarea {
 	width: 100%;
@@ -267,10 +265,15 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em;
 }
+.errorEmail {
+	display: none;
+	color: red;
+	font-weight: 700;
+}
 .sendEmail {
 	display : none;
 	padding-top: 20px;
-	font-weight: 700;;
+	font-weight: 700;
 }
 
 /* Coordonnée */
@@ -287,20 +290,18 @@ footer .coordonnees {
 footer .coordonnees .adress{
 	padding-bottom: 20px;
 }
-footer .coordonnees h3 {
+footer .coordonnees h2 {
+	font-size: 20px;
 	padding-bottom: 10px;
+}
+footer p {
+	margin: 0;
 }
 
 /* Format responsive */
 @media (max-width: 1024px) {
-	.top-header .name {
-		font-size: 25px;
-	}
-	.nav ul {
-		font-size: 20px;
-	}
 	.social-link img {
-		width: 25px;
+		width: 20px;
 	}
 	.picture {
 		flex : 2;
@@ -315,13 +316,13 @@ footer .coordonnees h3 {
 		text-align: center;
 		margin-top: 1em;
 	}
-	#about-me h3 {
+	#about-me h2 {
 		width: 100%;
 		font-size: 20px;
 	}
 	#about-me p {
 		width: 100%;
-		font-size: 18px;
+		font-size: 16px;
 	}
 	#about{
 		flex-direction: column;
@@ -340,16 +341,16 @@ footer .coordonnees h3 {
 		z-index: -1;
 	}
 	.title {
-		font-size: 25px;
+		font-size: 20px;
 	}
 	.gallery .nav {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.quote__text {
-		font-size: 24px;
+		font-size: 18px;
 	}
 	.quote__author {
-		font-size: 20px;
+		font-size: 16px;
 	}
 	#services .container {
 		flex-direction: column;
@@ -372,10 +373,7 @@ footer .coordonnees h3 {
 		z-index: 0;
 	}
 	.service h3 {
-		font-size: 23px;
-	}
-	.service p {
-		font-size: 17px;
+		font-size: 16px;
 	}
 	#contact .container {
 		flex-direction: column;
@@ -391,7 +389,7 @@ footer .coordonnees h3 {
 		right: 0;
 		z-index: -1;
 	}
-	footer .coordonnees h3 {
+	footer .coordonnees h2 {
 		padding-bottom: 5px;
 	}
 	footer .coordonnees p {
@@ -421,31 +419,8 @@ footer .coordonnees h3 {
 	.picture.left::before, .picture.right::before {
 		height: 150px;
 	}
-	.about-me__title {
-		font-size: 20px;
-	}
-	.about-me__introduction {
-		font-size: 18px;
-	}
-	#about-me p {
-		font-size: 16px;
-	}
 	.title {
-		font-size: 20px;
 		padding-bottom: 0px;
-	}
-	.gallery .nav {
-		font-size: 16px;
-	}
-	.quote__text {
-		font-size: 20px;
-	}
-	.service h3 {
-		font-size: 18px;
-		font-weight: 700;
-	}
-	.service p {
-		font-size: 16px;
 	}
 	#services .container {
 		align-items: center;
@@ -457,21 +432,8 @@ footer .coordonnees h3 {
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
-	.form-container p {
-		font-size: 16px;
-		text-align: justify;
-	}
 	form {
 		width: 100%;
-	}
-	form label {
-		font-size: 16px;
-	}
-	form input {
-		font-size: 16px;
-	}
-	input[type="submit"] {
-		font-size: 16px;
 	}
 	.sendEmail{
 		text-align-last: center;
