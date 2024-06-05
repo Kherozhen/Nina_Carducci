@@ -8,16 +8,5 @@ contactForm.addEventListener('submit', (e) => {
 
     sendEmail.style.display = 'block';
 
-    /*// Vérifier l'adresse email
-    if (!(emailInput)) {
-        errorEmail.style.display = 'block';
-        sendEmail.style.display = 'none';
-        return; // Empêche l'envoi du formulaire
-    } else {
-        errorEmail.style.display = 'none';
-        sendEmail.style.display = 'block';
-    }*/
-
-    // Reset du formulaire à l'envoi
     contactForm.reset();
 });
